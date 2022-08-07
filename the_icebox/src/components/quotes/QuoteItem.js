@@ -49,7 +49,7 @@ const QuoteItem = () => {
                 {quotes.map((quote) => (
                     <CardContent>
                         {quote.content}
-                        <br />
+                        <br /><br />
                         {quote.author}
                     </CardContent>
                 ))}
