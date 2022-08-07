@@ -8,8 +8,7 @@ import {
     IconButton,
     Menu,
     MenuItem,
-    Typography,
-    Divider
+    Typography
 } from '@mui/material';
 
 const userMenuItems = ['View Profile', 'Follow Profile', 'Add as Friend'];
