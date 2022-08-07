@@ -25,7 +25,6 @@ const CommentsContainer = ({ currentUserId }) => {
     }, [])
     return(
         <div className='comments-container'>
-            <CommentForm submitLabel='write' handleSubmit={addComment} />
             <div className='backend-comments-container'>
                 {rootComments.map((rootComment) => (
                     <Comment 

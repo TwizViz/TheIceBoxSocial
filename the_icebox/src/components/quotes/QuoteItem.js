@@ -48,9 +48,7 @@ const QuoteItem = () => {
                 {currentDate}
                 {quotes.map((quote) => (
                     <CardContent>
-                        {quote.content}
-                        <br /><br />
-                        {quote.author}
+                        
                     </CardContent>
                 ))}
                 <CardActions
