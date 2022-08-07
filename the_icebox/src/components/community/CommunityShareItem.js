@@ -1,9 +1,7 @@
 import React from 'react';
 import {
     Box,
-    Typography,
-    Avatar,
-    TextareaAutosize
+    Typography
 } from '@mui/material';
 
 const CommunityShareItem = () => {
@@ -15,7 +13,7 @@ const CommunityShareItem = () => {
                 </Typography>
             </Box>
         </div>
-    )
+    );
 }
 
  export default CommunityShareItem;

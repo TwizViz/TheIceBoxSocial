@@ -6,6 +6,7 @@ import {
 import BirthdayContainer from '../components/birthday/BirthdayContainer';
 import CommunityShareContainer from '../components/community/CommunityShareContainer';
 import QuoteItem from '../components/quotes/QuoteItem';
+import StatusUpdate from '../components/StatusUpdate';
 
 const HomePage = () => {  
     return(
@@ -17,6 +18,9 @@ const HomePage = () => {
                     </Box>
                     <Box sx={{ border: 'solid 1px blue', height: 'auto', width: 1080, display: 'flex', justifyContent: 'center' }}>
                         <QuoteItem />
+                    </Box>
+                    <Box sx={{ border: 'solid 1px cyan', height: 'auto', width: 1080, display: 'flex', justifyContent: 'center' }}>
+                        <StatusUpdate />
                     </Box>
                     <Box sx={{ border: 'solid 1px purple', height: 'auto', width: 1080, display: 'flex', justifyContent: 'center' }}>
                         <CommunityShareContainer />       
