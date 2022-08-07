@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
     Box,
     Stack
@@ -7,7 +7,7 @@ import BirthdayContainer from '../components/birthday/BirthdayContainer';
 import CommunityShareContainer from '../components/community/CommunityShareContainer';
 import QuoteItem from '../components/quotes/QuoteItem';
 
-const HomePage = () => {
+const HomePage = () => {  
     return(
         <div className='home-page'>    
             <Box sx={{ border: 'solid 1px black', height: '93.5Svh', width: 'auto', display: 'flex', justifyContent: 'center' }}>
