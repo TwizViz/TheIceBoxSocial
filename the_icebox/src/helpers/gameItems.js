@@ -1,26 +1,25 @@
+import tttBG from '../components/games/assets/img/tictactoeThumb.png';
+import ngBG from '../components/games/assets/img/numberGuessThumb.png';
+
 export const games = [
     {
         id: 1,
         title: 'Tic Tac Toe',
-        img: '../assets/default/tttImage.png',
-        path: '/games/tictactoe'
+        img: tttBG
     },
     {
         id: 2,
         title: 'Tetris',
-        img: '../assets/default/tetrisImage.png',
-        path: '/games/tetris'
+        img: '../assets/default/tetrisImage.png'
     },
     {
         id: 3,
         title: 'Number Guess',
-        img: '../assets/default/nGuessImage.png',
-        path: '/games/numberguess'
+        img: ngBG
     },
     {
         id: 4,
         title: 'Video Poker',
-        img: '../assets/default/vidPokerImage.png',
-        path: '/games/videopoker'
+        img: '../assets/default/vidPokerImage.png'
     }
 ]

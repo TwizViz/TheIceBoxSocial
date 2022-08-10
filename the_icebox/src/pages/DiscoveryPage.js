@@ -1,16 +1,53 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Typography, Button, Box, TextField, Stack } from '@mui/material';
+import api from '../api/preregistrants';
 
 const DiscoveryPage = () => {
     const [email, setEmail] = useState('');
+    const [preRegistrants, setPreRegistrants] = useState([]);
+
+    useEffect(() => {
+        const fetchPreRegistrants = async () => {
+            try {
+                const response = await api.get('/api/preRegistrants');
+                setPreRegistrants(response.data);
+            } catch (err) {
+                if (err.response) {
+                    //Not in the 200 response range
+                    console.log(err.response.data);
+                    console.log(err.response.status);
+                    console.log(err.response.headers);
+                } else{
+                    console.log(`Error: ${err.message}`);
+                }
+            }
+        }
+
+        fetchPreRegistrants();
+    }, []);
 
     const handleChange = (event) => {
         setEmail(event.target.value);
     }
 
-    const handlePreRegister = (event) => {
+    const handlePreRegister = async (event) => {
         event.preventDefault();
-        const formData = new FormData({ email: email.value })
+        //const dateTime = format(new Date(),'MM dd yyyy, hh:mm');
+        const userId = Math.random().toString(32).substring(2, 9);
+        const newPreRegistrant = {
+            uid: userId,
+            email: email,
+            datePreRegistered: new Date().getUTCDate(),
+            hasVerified: false
+        }
+        //console.log(newPreRegistrant);
+        try {
+            const response = await api.post('/preRegisteredClients', newPreRegistrant);
+            const allPreRegistrants = [...preRegistrants, response.data];
+            setPreRegistrants(allPreRegistrants);
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     return(

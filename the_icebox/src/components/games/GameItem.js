@@ -25,8 +25,8 @@ const GameCardItem = () => {
                         <CardContent sx={{ height: 220, width: 220, display: 'flex', justifyContent: 'center' }}>
                             <Stack direction='column'>
                                 <Grid item>
-                                    <Paper elevation={0} variant='outlined' sx={{ height: 175, width: 230, backgroundColor: 'orange', border: 'solid 5px', mr: 1.5 }}>
-                                        <img src={game.img} alt='thumb' />
+                                    <Paper elevation={0} variant='outlined' sx={{ height: 173, width: 230, border: 'solid 5px', mr: 1.5, backgroundColor: 'orange' }}>
+                                        <img src={game.img} alt='' />
                                     </Paper>
                                 </Grid>
                                 <Grid item>
